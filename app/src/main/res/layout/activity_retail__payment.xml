@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/back_activity_button"
+            android:src="@drawable/rof_backbutton"
+
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:id="@+id/logoutbtn"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/logout"
+            android:tint="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Payment"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/title"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activitytitle"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:id="@+id/couponlayout"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".1"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:tint="#a6d3d3d3"
+                    android:src="@drawable/amount"
+
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Coupon"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:src="@drawable/amount"
+                    android:text="GO"
+                    android:id="@+id/applycoupon"
+
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Gross Total"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/grosstotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Invoice Discount"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/invoicediscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Special Discount"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/specialdiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:inputType = "number"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="HF Redeem"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/hfredeem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/wallet"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Net Amount"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/netamount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Payment Type"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/paymenttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/paymenttypeid"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:visibility="gone"
+                android:id="@+id/cardlayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <ImageView
+                        android:src="@drawable/wallet"
+                        style="@style/inputIcons"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:text="Card Type"
+                                android:textSize="15dp"
+                                android:tint="#afd3d3d3" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:background="@drawable/edittext_bottom_line">
+
+                            <EditText
+                                android:id="@+id/cardname"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10dp"
+                                android:background="@null"
+                                android:inputType="number"
+                                />
+                            <EditText
+                                android:id="@+id/cardid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:src="@drawable/wallet"
+                        style="@style/inputIcons"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:text="Last 4 Digit"
+                                android:textSize="15dp"
+                                android:tint="#afd3d3d3" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:background="@drawable/edittext_bottom_line">
+
+                            <EditText
+                                android:id="@+id/lastdigit"
+                                android:inputType="number"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10dp"
+                                android:background="@null"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:visibility="gone"
+                android:id="@+id/batchlayout">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <ImageView
+                        android:src="@drawable/wallet"
+                        style="@style/inputIcons"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:text="Batch No."
+                                android:textSize="15dp"
+                                android:tint="#afd3d3d3" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:background="@drawable/edittext_bottom_line">
+
+                            <EditText
+                                android:id="@+id/batchno"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10dp"
+                                android:background="@null"
+                                android:inputType="number"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:src="@drawable/wallet"
+                        style="@style/inputIcons"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:text="Approval Code"
+                                android:textSize="15dp"
+                                android:tint="#afd3d3d3" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17dp"
+                            android:background="@drawable/edittext_bottom_line">
+
+                            <EditText
+                                android:id="@+id/approvalcode"
+                                android:inputType="text"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="10dp"
+                                android:background="@null"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:visibility="gone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_states"
+                    android:gravity="center"
+                    android:id="@+id/getoffer"
+                    android:drawableStart="@drawable/go"
+                    android:drawableTint="#ffff"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Employee Code"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/employeecode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                    <EditText
+                        android:id="@+id/employeeid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/remarks"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Discount Remarks"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/discountremarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:visibility="gone"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/remarks"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Advance Remarks"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/advanceremarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                style="@style/inputRow"
+                android:visibility="gone"
+                >
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/amount"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Advance Amount"
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <EditText
+                        android:id="@+id/advanceamount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:id="@+id/saveaviation"
+                android:background="@color/colorPrimary"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+
+

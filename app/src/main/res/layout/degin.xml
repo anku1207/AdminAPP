@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:scaleType="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/listimage"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_launcher_background"
+        android:textAlignment="center"
+         />
+
+    <com.uav.ava.override.UAVTextView
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:id="@+id/listtext"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="center"
+        android:textAlignment="center"
+        />
+
+    </LinearLayout>
+

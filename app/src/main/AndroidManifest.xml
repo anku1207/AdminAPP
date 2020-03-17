@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.uav.ava">
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="barcode" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Mosambee permissions -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature android:name="android.hardware.usb.host" /> <!-- End -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconapp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.OffLineSetting"></activity>
+        <activity android:name=".activity.SettingApp" />
+        <activity android:name=".activity.Railway_Sales" />
+        <activity
+            android:name=".activity.Cancel_Invoice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Retail_Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Retail_Product_Scan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Retail_Sales"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.InvoiceList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrintInvoice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MosambeePrinterScanner"
+            android:label="@string/title_activity_mosambee_printer_scanner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Combo_Offer"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.Splash_Screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Login_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FlightNoProtocol"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.BarcodeScanner" />
+        <activity
+            android:name=".activity.ListViewSingleText"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SingleImage"
+            android:screenOrientation="portrait"
+            android:theme="@style/popup" />
+        <activity
+            android:name=".activity.Dialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/popup" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.uav.ava.provider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.Flight_Scan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Passenger_Info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Product_Scan"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.Payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Offer"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.SendLog">
+            <intent-filter>
+                <action android:name=".activity.SendLog" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Success" />
+
+        <service android:name=".MosambeeBarcode.SerialPortService" />
+
+        <receiver
+            android:name=".MosambeePrinterScanner$MosambeeBroadCastReceiver"
+            android:exported="true" />
+        <receiver
+            android:name=".activity.Flight_Scan$MyBroadcastReceiver"
+            android:exported="true" />
+    </application>
+
+</manifest>

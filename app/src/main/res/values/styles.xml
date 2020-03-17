@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:fitsSystemWindows">false</item>
+
+
+    </style>
+
+
+    <style name="fullscreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- &lt;!&ndash; <item name="android:background">#6b5f5f</item>&ndash;&gt;
+       <item name="android:windowBackground">@color/colorPrimaryDark</item>
+       <item name="android:colorBackground">@color/colorAccent</item>
+-->
+
+        <!-- Customize your theme here. -->
+        <!-- <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+
+    </style>
+
+
+    <style name="popup" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--  <item name="android:background">#FFFF</item-->>
+
+    </style>
+
+
+    <style name="inputIcons">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:tint">#a6d3d3d3</item>
+    </style>
+
+    <style name="inputRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+
+    <style name="TextViewMrp" parent="android:Widget.TextView">
+        <item name="android:background">@color/mrp_textViewBackgroundColor</item>
+        <item name="android:textColor">@color/mrp_textViewTextColor</item>
+        <item name="android:textSize">@dimen/mrp_textView_textSize_normal</item>
+        <item name="android:paddingLeft">@dimen/mrp_textView_padding_left</item>
+        <item name="android:paddingRight">@dimen/mrp_textView_padding_left</item>
+        <item name="android:paddingTop">@dimen/mrp_textView_padding_top</item>
+        <item name="android:paddingBottom">@dimen/mrp_textView_padding_top</item>
+    </style>
+
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#12ab55</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AVA</string>
+    <string name="getotp"><u>Get OTP</u></string>
+    <string name="verify"><u>Verify OTP</u></string>
+
+    <string name="resendotp"><u>Resend OTP</u></string>
+    <string name="title_activity_mosambee_printer_scanner">MosambeePrinterScanner</string>
+    <string name="title_activity_invoice_layout">InvoiceLayout</string>
+</resources>

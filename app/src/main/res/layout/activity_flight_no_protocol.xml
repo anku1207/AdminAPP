@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/back_activity_button"
+            android:src="@drawable/rof_backbutton"
+
+            />
+
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:id="@+id/logoutbtn"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/logout"
+            android:tint="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="fill_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="AVA"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/title"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainactivitytitle"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.Booking"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        >
+            <LinearLayout
+                style="@style/inputRow"
+                >
+
+
+                <ImageView
+                    style="@style/inputIcons"
+                    android:src="@drawable/rof_book_from_icon"
+
+
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Barcode No."
+                        android:textSize="15dp"
+                        android:tint="#afd3d3d3" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:background="@drawable/edittext_bottom_line">
+
+                        <EditText
+                            android:id="@+id/scanedittext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="30dp"
+                            android:background="@null"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:editable="false"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/cameraofawbno"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:src="@drawable/rof_camera_btn_icon" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/passengermainlayout"
+            >
+            <ImageView
+                android:src="@drawable/usericon"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Passenger Name"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/passengername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/flightoriginmainlayout"
+            >
+            <ImageView
+                android:src="@drawable/location"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Flight Origin"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/flightoriginname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/flightdestinationmainlayout"
+            >
+            <ImageView
+                android:src="@drawable/location"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Flight Destination"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/flightdestinationname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/flightnumbermainlayout"
+            >
+            <ImageView
+                android:src="@drawable/number"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Flight Number"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/flightnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/traveldaymainlayout"
+            >
+            <ImageView
+                android:src="@drawable/day"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Travel Day"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/travelday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/seatnomainlayout"
+            >
+            <ImageView
+                android:src="@drawable/seat"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Seat Number"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/seatno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            android:id="@+id/mobilemainlayout"
+            >
+            <ImageView
+                android:src="@drawable/mobile"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Mobile Number"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <EditText
+                    android:id="@+id/mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            >
+
+            <ImageView
+
+                android:src="@drawable/home"
+                style="@style/inputIcons"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Reason"
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+
+
+                <EditText
+                    android:id="@+id/reasonname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp" />
+
+                <EditText
+                    android:id="@+id/reasonid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        <LinearLayout
+            style="@style/inputRow"
+            >
+            <ImageView
+                android:src="@drawable/image"
+                style="@style/inputIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Boarding pass Image "
+                    android:textSize="15dp"
+                    android:tint="#afd3d3d3" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:background="@drawable/edittext_bottom_line">
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="100dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone" />
+                    <ImageButton
+                        android:id="@+id/imageclick"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/rof_camera_btn_icon" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:id="@+id/nosaleinfo"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+
+            />
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+
+

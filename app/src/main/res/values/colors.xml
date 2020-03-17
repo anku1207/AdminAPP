@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B51E23</color>
+    <color name="colorPrimaryDark">#f7b51e23</color>
+    <color name="colorAccent">#fd5454</color>
+
+    <color name="white">#fffeff</color>
+
+
+
+    <color name="errorColor">#ffffff</color>
+    <color name="textColor">#000000</color>
+    <color name="mosambeeDeviceBtnEnable">#000000</color>
+
+
+    <!-- Rounded view Colors -->
+
+    <color name="paynimo_roundedViewBorderColor">#cccccc</color>
+    <color name="paynimo_roundedViewBGColor">#FFFFFF</color>
+    <color name="rscolor">#283593</color>
+
+
+
+    <color name="mrp_textViewTextColor">#2E2E2E</color>
+    <color name="mrp_textViewBackgroundColor">#FFFFFF</color>
+
+
+
+</resources>
